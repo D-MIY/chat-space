@@ -4,6 +4,7 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
+- has_many :messages
 - has_many :users_groups
 - has_many :groups, through: :groups_users
 
@@ -12,6 +13,7 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
+- has_many :messages
 - has_many :users_groups
 - has_many :users, through: :groups_users
 
