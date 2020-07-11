@@ -2,7 +2,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :users_groups
 - has_many :groups, through: :groups_users
@@ -10,7 +10,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :users_groups
 - has_many :users, through: :groups_users
@@ -27,8 +27,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|string|null: false|
-|image|string|null: false|
+|body|string||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
