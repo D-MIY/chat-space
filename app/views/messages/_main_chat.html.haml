@@ -1,0 +1,39 @@
+.Main
+
+  .Info
+    .Info__group
+      .Info__name
+        group1
+      %ul.Info__members
+        Members:
+        %li.Info__member
+          Aniki
+    = link_to "#", class: 'Info__edit' do
+      Edit
+
+  .Message
+    .Message__items
+      .Message__info
+        .Message__user
+          Aniki
+        .Message__date
+          2020/07/10
+      .Message__content
+        Good morning.
+    .Message__items
+      .Message__info
+        .Message__user
+          Kazuya
+        .Message__date
+          2020/07/12
+      .Message__content
+        Good night.
+
+  .Send
+    %form.Send__items
+      .Send__box
+        %input{class: 'Send__messsage', placeholder: 'type a messsage.', type: "text"}
+        %label{class: 'Send__image'}
+          = icon('far', 'image')
+          %input{type: 'file', class: 'Send__image--hidden'}
+      %input{type: "submit", value: 'Send', class: 'Send__btn'}
