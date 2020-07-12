@@ -1,0 +1,20 @@
+.Side
+
+  .User
+    .User__items
+      %h3.User__name
+        name
+      %ul.User__icons
+        %li.User__icon
+          = link_to "https://www.facebook.com/", class: 'User__btn' do
+            = icon('far', 'edit')
+        %li.User__icon
+          = link_to "https://www.instagram.com/", class: 'User__btn' do
+            = icon('fas', 'cog')
+            
+  .Groups
+    .Group__items
+      .Group__name
+        group
+      .Group__message
+        no message

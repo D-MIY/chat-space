@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.Side {
+  width: 300px;
+  color: #ffffff;
+
+  .User {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    &__items {
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__icons {
+      display: flex;
+      justify-content: end;
+    }
+    &__icon{
+      margin-left: 5px;
+    }
+    &__btn{
+      color: #ffffff;
+    }
+  }
+
+  .Groups {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+
+    &__items {
+      font-weight: bold;
+      padding: 20px 0 40px 0;
+    }
+    &__name{
+      font-size: 15px;
+    }
+    &__message{
+      font-size: 11px;
+      padding-top: 5px;
+    }
+  }
+}
+
+.Main {
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+
+  .Info {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+
+    &__group {
+    }
+    &__name {
+      font-size: 20px;
+      color: #333333;
+      margin-top: 35px;
+    }
+    &__members {
+      font-size: 12x;
+      color: #999999;
+      margin-top: 15px;
+      display: flex;
+    }
+    &__member {
+      padding-left: 5px;
+    }
+    &__edit{
+      height: 40px;
+      padding: 0 20px;
+      margin-top: 28px;
+      line-height: 40px;
+      color: #38aef0;
+      border: 1px solid #38aef0;
+      text-decoration: none;
+    }
+  }
+
+  .Message {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px;
+    
+    &__items {
+      margin-bottom: 46px;
+    }
+    &__info {
+      display: flex;
+    }
+    &__user {
+      color: #333333;
+      font-size: 16px;
+    }
+    &__date {
+      color: #999999;
+      font-size: 12px;
+    }
+    &__content {
+      color: #434A54;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+  }
+
+  .Send {
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px 20px 40px;
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__box {
+      background-color: #ffffff;
+      width: 100%;
+      position: relative;
+    }
+    &__messsage {
+        background-color: #ffffff;
+        height: 50px;
+        width: 100%;
+        padding: 0 50px 0 10px;
+        border: none;
+    }
+    &__image {
+      position: absolute;
+      right: 10px;
+      line-height: 50px;
+    }
+    &__image--hidden {
+      display: none;
+    }
+    &__btn {
+      font-size: 16px;
+      color: #fff;
+      background-color: #38aef0;
+      border: none;
+      padding: 0 30px;
+      margin-left: 15px;
+    }
+  }
+}
