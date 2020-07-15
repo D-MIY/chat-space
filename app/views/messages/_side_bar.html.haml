@@ -6,15 +6,17 @@
         = current_user.name
       %ul.User__icons
         %li.User__icon
-          = link_to "#", class: 'User__btn' do
+          = link_to new_group_path, class: 'User__btn' do
             = icon('far', 'edit')
         %li.User__icon
           = link_to edit_user_path(current_user), class: 'User__btn' do
             = icon('fas', 'cog')
 
-  .Groups
-    .Group__items
-      .Group__name
-        group
-      .Group__message
-        no message
+  .Group
+    - current_user.groups.each do |group|
+      .Group__items
+        = link_to '#' do
+          .Group__name
+            = group.name
+          .Group__message
+            メッセージはまだありません
