@@ -3,37 +3,23 @@
   .Info
     .Info__group
       .Info__name
-        group1
+        = @group.name
       %ul.Info__members
         Members:
-        %li.Info__member
-          Aniki
-    = link_to "#", class: 'Info__edit' do
+        - @group.users.each do |user|
+          %li.Info__member
+            = user.name
+    = link_to edit_group_path(@group.id), class: 'Info__edit' do
       Edit
 
   .Message
-    .Message__items
-      .Message__info
-        .Message__user
-          Aniki
-        .Message__date
-          2020/07/10
-      .Message__content
-        Good morning.
-    .Message__items
-      .Message__info
-        .Message__user
-          Kazuya
-        .Message__date
-          2020/07/12
-      .Message__content
-        Good night.
+    = render @messages
 
   .Send
-    %form.Send__items
+    = form_with model: [@group, @message], html: {class: "Send__items"}, local: true do |f|
       .Send__box
-        %input{class: 'Send__messsage', placeholder: 'type a messsage.', type: "text"}
-        %label{class: 'Send__image'}
-          = icon('far', 'image')
-          %input{type: 'file', class: 'Send__image--hidden'}
-      %input{type: "submit", value: 'Send', class: 'Send__btn'}
+        = f.text_field :content, class: 'Send__messsage', placeholder: 'type a message'
+        = f.label :image, class: 'Send__image' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'Send__image--hidden'
+      = f.submit 'Send', class: 'Send__btn'
