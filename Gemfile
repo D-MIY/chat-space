@@ -74,4 +74,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
 
+gem 'fog-aws'
+
 # Instance ID: i-0b0d43f49e3cfaa65
